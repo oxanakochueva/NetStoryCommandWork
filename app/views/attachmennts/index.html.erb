@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attachmennts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attachmennts.each do |attachmennt| %>
+      <tr>
+        <td><%= attachmennt.type %></td>
+        <td><%= attachmennt.url %></td>
+        <td><%= link_to 'Show', attachmennt %></td>
+        <td><%= link_to 'Edit', edit_attachmennt_path(attachmennt) %></td>
+        <td><%= link_to 'Destroy', attachmennt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attachmennt', new_attachmennt_path %>

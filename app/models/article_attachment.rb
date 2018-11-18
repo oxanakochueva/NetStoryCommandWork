@@ -1,0 +1,2 @@
+class ArticleAttachment < ApplicationRecord
+end
