@@ -20,11 +20,11 @@ ActiveRecord::Schema.define(version: 2018_11_17_213350) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.integer "design_id"
+    # t.integer "design_id"
     t.string "title"
     t.text "body"
-    t.string "cover"
-    t.integer "year_id"
+    # t.string "cover"
+    # t.integer "year_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

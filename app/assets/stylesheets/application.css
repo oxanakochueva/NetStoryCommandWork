@@ -14,7 +14,13 @@
  *= require_self
  */
 body {
+<<<<<<< HEAD
      width: 100%;
      height: 100%;
      background-color: #FF85A6;
  }
+=======
+  background-color: #FF85A6;
+  color: white;
+}
+>>>>>>> 39e46e57fd2f4b9de34f3d63c1e205daedc30a33

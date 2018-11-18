@@ -1,0 +1,25 @@
+
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 20px;
+  background-color: black;
+
+  a, a:visited {
+    margin-right: 10px;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 16px;
+    color: white;
+
+  &:hover {
+    color:lightblue;
+  }
+  }
+
+}
