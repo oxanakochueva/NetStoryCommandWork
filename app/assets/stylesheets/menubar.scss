@@ -1,24 +1,28 @@
 
 .menubar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
   box-sizing: border-box;
   height: 60px;
+  width: 100%;
   padding: 0 20px;
-  background-color: black;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 
   a, a:visited {
-    margin-right: 10px;
+    margin-right: 30px;
     text-decoration: none;
     line-height: 60px;
     font-size: 16px;
-    color: white;
+    color: black;
 
   &:hover {
-    color:lightblue;
+    background: white;
+    color: grey;
+    transition: 1s ease;
   }
   }
 

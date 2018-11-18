@@ -14,7 +14,75 @@
  *= require_self
  */
 body {
-     background-color: #FF85A6;
-     color: white;
+  background: #F3F3F3;
+  padding: 40px;
+  font-family: "Open Sans", sans-serif;
 }
->>>>>>> 39e46e57fd2f4b9de34f3d63c1e205daedc30a33
+
+  a, a:visited {
+    text-decoration: none;
+    font-size: 16px;}
+
+  a:hover {
+    background: #F3F3F3;
+    color: black;
+    transition: 1s ease;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.65rem;
+}
+
+p {
+  font-size: 0.86rem;
+  font-weight: lighter;
+  line-height: 1rem;
+}
+
+.buttons a {
+  margin-right: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.article {
+  background: #FFF;
+  margin: 0 0 20px;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(#000, 0.2),
+      0 4px 8px rgba(#000, 0.2);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform-origin: center;
+    transform: scale(0.98);
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: #444;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+}

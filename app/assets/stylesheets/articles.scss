@@ -1,3 +1,65 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #F3F3F3;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.65rem;
+}
+
+p {
+  font-size: 0.86rem;
+  font-weight: lighter;
+  line-height: 1rem;
+}
+
+.buttons a {
+  margin-right: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.all {
+  background: #FFF;
+  margin: 0 0 20px;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(#000, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(#000, 0.2),
+      0 4px 8px rgba(#000, 0.2);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform-origin: center;
+    transform: scale(0.98);
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: #444;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+}
