@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'welcome/index'
+  root 'articles#index'
   resources :spams
   resources :article_attachments
   resources :attachmennts
