@@ -13,29 +13,29 @@ class DesignsController < ApplicationController
   end
 
   # GET /designs/new
-  def new
-    @design = Design.new
-  end
+ # def new
+    #@design = Design.new
+ # end
 
   # GET /designs/1/edit
-  def edit
-  end
+ # def edit
+ # end
 
   # POST /designs
   # POST /designs.json
-  def create
-    @design = Design.new(design_params)
+  #def create
+    #@design = Design.new(design_params)
 
-    respond_to do |format|
-      if @design.save
-        format.html { redirect_to @design, notice: 'Design was successfully created.' }
-        format.json { render :show, status: :created, location: @design }
-      else
-        format.html { render :new }
-        format.json { render json: @design.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+    #respond_to do |format|
+     # if @design.save
+        #format.html { redirect_to @design, notice: 'Design was successfully created.' }
+        #format.json { render :show, status: :created, location: @design }
+     # else
+    #    format.html { render :new }
+    #    format.json { render json: @design.errors, status: :unprocessable_entity }
+    #  end
+#    end
+  #end
 
   # PATCH/PUT /designs/1
   # PATCH/PUT /designs/1.json
