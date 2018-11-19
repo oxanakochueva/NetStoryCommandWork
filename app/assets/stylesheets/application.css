@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
-body {
+ body {
   background: #F3F3F3;
-  padding: 40px;
+  padding-top: 40px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
     font-size: 16px;}
 
   a:hover {
-    background: #F3F3F3;
+    background: white;
     color: black;
     transition: 1s ease;
   }
@@ -34,8 +34,6 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  max-width: 500px;
   margin: 0 auto;
 }
 

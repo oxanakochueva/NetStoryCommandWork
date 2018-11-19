@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @attachmennt.type %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @attachmennt.url %>
+  <strong>Picture:</strong>
+  <%= image_tag @attachmennt.picture %>
 </p>
 
 <%= link_to 'Edit', edit_attachmennt_path(@attachmennt) %> |
