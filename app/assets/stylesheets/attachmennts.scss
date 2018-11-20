@@ -1,3 +1,66 @@
-// Place all the styles related to the Attachmennts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Colors
+$green: #5eab1f;
+$orange: #ee552a;
+$blue: #59adEb;
+
+
+// Variables
+$radius: 2px;
+
+
+// Default Base Styles
+.attach {
+  margin-right: 40px;
+}
+
+
+// attach Mixin
+@mixin attach($width, $background, $padding) {
+
+  %base-shadow {
+    box-shadow: -18px 18px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  %attach-base {
+    position: relative;
+    float: left;
+    width: $width;
+    border-radius: $radius;
+    @extend %base-shadow;
+    background: $background;
+    overflow: hidden;
+  }
+
+  .attach {
+    @extend %attach-base;
+  }
+
+  .attach-header,
+  .attach-body {
+    position: relative;
+    padding: $padding;
+  }
+
+  .attach-header {
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .with-photo & {
+      height: $width * .65;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+h4 {
+	font-size: 62.5%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+// Mixin Calls
+@include attach(320px, #fff, 20px);
