@@ -1,5 +1,6 @@
 
 .menubar {
+  text-decoration: none;
   display: flex;
   justify-content: flex-start;
   position: fixed;
@@ -23,6 +24,7 @@
     background: white;
     color: grey;
     transition: 1s ease;
+    text-decoration: none;
   }
   }
 

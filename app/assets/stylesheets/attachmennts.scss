@@ -10,7 +10,7 @@ $radius: 2px;
 
 // Default Base Styles
 .attach {
-  margin-right: 40px;
+  margin: 0 40px 20px 0;
 }
 
 
@@ -48,11 +48,7 @@ $radius: 2px;
       max-width: 100%;
     }
 
-    .with-photo & {
-      height: $width * .65;
-      padding: 0;
-      overflow: hidden;
-    }
+
   }
 }
 
@@ -62,5 +58,9 @@ h4 {
 	text-transform: uppercase;
 }
 
+.attachmennt_main {
+  display: flex;
+  flex-direction: column;
+}
 // Mixin Calls
 @include attach(320px, #fff, 20px);

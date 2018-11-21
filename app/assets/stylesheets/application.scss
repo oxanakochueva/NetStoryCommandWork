@@ -14,9 +14,7 @@
  *= require_self
  */
 
-
-
- body {
+body {
   background: #FF85A6;
   padding-top: 40px;
   font-family: "Open Sans", sans-serif;
@@ -29,6 +27,7 @@ h1 {
 .button {
   transition: opacity 300ms linear;
   margin-top: 3em;
+
   a {
     color: #202129;
     background-color: #f2f2f2;
@@ -41,6 +40,7 @@ h1 {
     &:hover, &:focus {
       color: #202129;
       background-color: #e1e2e2;
+      text-decoration: none;
     }
   }
 }

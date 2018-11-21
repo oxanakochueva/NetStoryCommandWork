@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_135029) do
+ActiveRecord::Schema.define(version: 2018_11_21_140547) do
 
   create_table "article_attachments", force: :cascade do |t|
     t.integer "attachment_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2018_11_19_135029) do
     t.integer "year_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pic"
   end
 
   create_table "attachmennts", force: :cascade do |t|
