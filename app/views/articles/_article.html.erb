@@ -13,36 +13,15 @@
 <link rel="stylesheet" href="../../assets/stylesheets/menubar.scss">
 <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
 
-<div class="card">
 
-	<div id="browser-top">
-	    <div id="close-btn"></div>
-	    <div id="min-btn"></div>
-	    <div id="full-btn"></div>
-	</div>
 
-	<div class="background"><%= image_tag article.pic.url %></div>
+<div class="tags">
+	<h4><%= article.title %></h4>
+	<p><%= article.body %></p>
 
-	<div class="details">
-		<h2><%= article.title %></h2>
-		<p><%= article.body %></p>
-		<div class="meta">
-			<div class="equipment">
-				<h4>Publication Data</h4>
-				<ul>
-					<li>20 November 2018</li>
-				</ul>
-			</div>
-		</div>
 
-		<div class="tags">
-			<h4>Actions</h4>
-			<ul>
-				<li><%= link_to 'Edit', edit_article_path(article) %></li>
-				<li><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-			</ul>
-		</div>
+	<%= link_to 'Show', article %>
+	<%= link_to 'Edit', edit_article_path(article) %>
+	<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 
-	</div>
-	
 </div>

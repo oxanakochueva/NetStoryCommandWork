@@ -7,7 +7,7 @@ $color-body-copy: #b9bcbd;
 $default-border-radius: 2px;
 $breakpoint-medium: "screen and (min-width: 700px)";
 
-@mixin list-reset() {
+ @mixin list-reset() {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -15,7 +15,6 @@ $breakpoint-medium: "screen and (min-width: 700px)";
 
 html {
 	box-sizing: border-box;
-	color: $color-body-copy;
 	font: {
 		family: 'Roboto', sans-serif;
 		size: 100%;
@@ -27,11 +26,7 @@ html {
 	box-sizing: inherit;
 }
 
-body {
-	background-color: $color-tag-background;
-	padding: 2.1875em;
 
-}
 
 p {
 	font-size: 87.5%;
@@ -40,63 +35,25 @@ p {
   color: #9A9A9A;
 }
 
-#browser-top {
-  background-color: $color-card-background;
-  height: 40px;
-  border-top-left-radius: $default-border-radius;
-  border-top-right-radius: $default-border-radius;
-  padding: 8px 15px;
-}
+.cards {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	width: 100%;
 
-#close-btn {
-  border-radius: 50%;
-  width:15px;
-  height:15px;
-  margin-bottom:5px;
-  background-color: #FF85A6;
-  display: inline-block;
-}
 
-#min-btn {
-  border-radius: 50%;
-  width:15px;
-  height:15px;
-  background-color: #FFDF50;
-  display: inline-block;
-  margin:0 5px 5px 5px;
-}
 
-#full-btn {
-  border-radius: 50%;
-  width:15px;
-  height:15px;
-  margin-bottom:5px;
-  background-color: #74FFA4;
-  display: inline-block;
-}
 
 .card {
-	background-color: $color-card-background;
-	border-radius: $default-border-radius;
-	box-shadow: -18px 18px 4px 0px rgba(0, 0, 0, 0.2);
-	display: flex;
+    display: flex;
 	flex-direction: column;
-	width: 100%;
-	max-width: 500px;
-	margin-right: 2rem;
-	margin-bottom: 2rem;
-
-	@media #{$breakpoint-medium} {
-		flex-direction: column;
-	}
+	justify-content: space-between;
+	background-color: white;
+	border: 1px solid #333;
+	width: 500px;
+	margin: 10px;
+	padding: 15px;
 }
-
-.background {
-	background-position: center;
-	background-size: cover;
-	border-top-left-radius: $default-border-radius;
-	border-top-right-radius: $default-border-radius;
-	min-height: 250px;
 
 	@media #{$breakpoint-medium} {
 		border-top-left-radius: $default-border-radius;
@@ -105,7 +62,7 @@ p {
 		min-height: none;
 		width: 100%;
 	}
-}
+
 
 img {
 	vertical-align: middle;
@@ -113,12 +70,6 @@ img {
 	width: 100%;
 }
 
-.details {
-	padding: 2.1875em 5%;
-
-	@media #{$breakpoint-medium} {
-		width: 100%;
-	}
 
 	h2, h4 {
 		color: #000;
@@ -126,19 +77,10 @@ img {
 		margin: 0;
 	}
 
-	h2 {
-		font-weight: bold;
-		font-size: 150%;
-		line-height: 1.4;
-		margin-bottom: 0.35em;
-	}
 
 	h4 {
-		font-size: 62.5%;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		font-size: 20px;
 	}
-}
 
 .author {
 	color: $color-body-copy;
@@ -182,13 +124,14 @@ img {
 	}
 
 	a {
-		background-color: $color-tag-background;
-		border-radius: 50px;
-		color: #fff;
-		display: block;
-		padding: 0.3125em 1.25em;
-		text-decoration: none;
-		transition: color 0.3s ease;
+		background-color: #FF85A6;
+	    border: none;
+	    border-radius: 4%;
+	    font-size: 14px;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    padding: 5px 24px;
+	    transition: background-color 0.5s;
 
 		&:hover, &:focus {
 			color: $color-anchor;
@@ -196,14 +139,64 @@ img {
 		}
 	}
 }
-
-.article_main {
-  display: flex;
-  flex-direction: column;
+}
+body form{
+	margin: 0 auto;
 }
 
-.massive {
+form {
+	width: 800px;
+	background-color: $color-tag-background;
+	padding: 10px;
 	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+form textarea {
+  width: 500px;
+  border: 1px solid #000745;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  min-height: 100px;
+  transition: border 0.5s;
+}
+form textarea:focus {
+  border: 1px solid #0084d7;
+  box-shadow: 0;
+  outline: 0;
+  transition: border 0.5s;
+}
+
+input#article_title{
+	width: 500px;
+	border: 1px solid #000745;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+input#article_pic{
+	border: none;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 0;
+	transition: background-color 0.5s;
+}
+
+.actions input {
+	background-color: #FF85A6;
+	border: none;
+	border-radius: 4%;
+	font-size: 14px;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: 5px 24px;
+	transition: background-color 0.5s;
+
+	&:hover, &:focus {
+		color: $color-anchor;
+		background-color: $color-tag-background;
+	}
 }

@@ -26,6 +26,11 @@
     <%= form.text_area :body %>
   </div>
 
+  <div class="field">
+    <%= form.label :year %>
+    <%= select_year(Date.today, :start_year => 1957, :end_year =>  Date.today.year) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

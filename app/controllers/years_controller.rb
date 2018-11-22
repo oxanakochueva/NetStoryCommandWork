@@ -9,7 +9,8 @@ class YearsController < ApplicationController
 
   # GET /years/1
   # GET /years/1.json
-  def show
+  def year
+      get 'year/:id' => 'year#show'
   end
 
   # GET /years/new
