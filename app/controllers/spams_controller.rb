@@ -1,5 +1,5 @@
 class SpamsController < ApplicationController
-  before_action :set_spam, only: [:show, :edit, :update, :destroy]
+  before_action :set_spam, only: [:pic, :show, :edit, :update, :destroy]
 
   # GET /spams
   # GET /spams.json
@@ -69,6 +69,6 @@ class SpamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spam_params
-      params.require(:spam).permit(:image)#, :pic)
+      params.require(:spam).permit(:image)
     end
 end

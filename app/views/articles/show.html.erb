@@ -2,7 +2,17 @@
 
 <div><%= render 'article', article: @article %></div>
 
-
-
-
+<%= link_to 'Edit', edit_articles_path(@articles) %> |
 <%= link_to 'Back', articles_path %>
+
+<% @article.article_attachments.each do |article_attachment| %>
+<div>
+    <p>
+        <%= article_attachment.body %>
+    </p>
+    <%= link_to 'Edit ArticleAttachment', edit_articles_articles_attachments_path(@article, article_attachment) %>
+</div>
+<% end %>
+
+<br>
+<%= link_to 'Add ArticleAttachment', new_articles_articles_attachments_path(@article) %>

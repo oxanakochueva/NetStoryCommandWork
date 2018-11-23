@@ -67,6 +67,18 @@ class ArticleAttachmentsController < ApplicationController
       @article_attachment = ArticleAttachment.find(params[:id])
     end
 
+def set_article
+    @article = Article.find(params[:article_id])
+end
+
+def set_article_from_params
+    @article = Article.find(params[:article_id])
+end
+
+def set_post_from_article_attachment
+    @article = @article_attachment.article
+end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_attachment_params
       params.require(:article_attachment).permit(:attachment_id, :article_id)

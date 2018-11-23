@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   resources :designs
 
 
-  get 'designs/index' do
-resources :designs
+  get 'designs/index'
+resources :designs do
+    resources :article_attachments
 end
 
 root 'designs#index'
